@@ -1,7 +1,7 @@
 package org.hhm.crawler.pojo;
 
 import org.dom4j.Element;
-import org.hhm.crawler.util.md5.MD5;
+import org.hhm.common.util.md5.MD5;
 
 public class Seeds implements Cloneable {
 

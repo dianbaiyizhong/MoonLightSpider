@@ -2,11 +2,11 @@ package org.hhm.crawler.init;
 
 import java.util.List;
 
+import org.hhm.common.util.xml.XMLElement;
+import org.hhm.common.util.xml.XmlBean;
 import org.hhm.crawler.pojo.Seeds;
 import org.hhm.crawler.update.BloomFilter;
 import org.hhm.crawler.update.Crawldb;
-import org.hhm.crawler.util.xml.XMLElement;
-import org.hhm.crawler.util.xml.XmlBean;
 
 public class Init {
 

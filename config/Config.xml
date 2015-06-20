@@ -9,9 +9,9 @@
 	<!-- 是否应用模板 -->
 	<isApplyTemplate>0</isApplyTemplate>
 	<!-- 线程数 -->
-	<threads>20</threads>
+	<threads>1</threads>
 	<!-- 单位采集线程数 -->
 	<threadGatherMax>50</threadGatherMax>
 	<!-- 采取信息存储路径 -->
-	<indexPath>F://SpiderMoonLight</indexPath>
+	<indexPath>/Users/admin/MoonLightSpider/新浪门户</indexPath>
 </Configs>

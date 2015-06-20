@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
+import org.hhm.common.pojo.Config;
 import org.hhm.crawler.fetch.Gather;
-import org.hhm.crawler.pojo.Config;
 import org.hhm.crawler.pojo.Seeds;
 import org.hhm.crawler.update.Crawldb;
 

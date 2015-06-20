@@ -12,5 +12,9 @@
 	<classpathentry kind="lib" path="lib/jsonplugin-0.32.jar"/>
 	<classpathentry kind="lib" path="lib/commons-beanutils-1.8.0.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-analyzers-common-4.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-core-4.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-demo-4.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/lucene-queryparser-4.7.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

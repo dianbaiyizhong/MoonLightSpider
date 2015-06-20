@@ -7,14 +7,14 @@ import java.io.Writer;
 
 import net.sf.json.JSONObject;
 
+import org.hhm.common.pojo.Config;
 import org.hhm.common.pojo.Content;
-import org.hhm.crawler.pojo.Config;
 
 public class Store {
 	static Config config = new Config();
 
 	public void Save(Content content) {
-		File file = new File(config.getIndexPath() + "\\"
+		File file = new File(config.getIndexPath() + "/"
 				+ content.getSeedName());
 
 		// 先创建一个seedName的文件夹
@@ -24,7 +24,7 @@ public class Store {
 		}
 
 		// 在对应的seedName文件夹中创建txt
-		File file1 = new File(file.getAbsolutePath() + "\\" + content.getMd5()
+		File file1 = new File(file.getAbsolutePath() + "/" + content.getMd5()
 				+ ".txt");
 		try {
 			// 如果不存在txt文件，就创建
