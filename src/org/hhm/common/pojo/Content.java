@@ -1,4 +1,4 @@
-package org.hhm.crawler.pojo;
+package org.hhm.common.pojo;
 
 public class Content {
 	public String getTitle() {
@@ -25,6 +25,7 @@ public class Content {
 
 	private String title;
 	private String text;
+
 	public String getMd5() {
 		return md5;
 	}
@@ -34,6 +35,7 @@ public class Content {
 	}
 
 	private String md5;
+
 	public String getSeedName() {
 		return seedName;
 	}
@@ -43,6 +45,7 @@ public class Content {
 	}
 
 	private String seedName;
+
 	public String getUrl() {
 		return url;
 	}

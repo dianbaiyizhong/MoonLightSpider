@@ -7,8 +7,8 @@ import java.io.Writer;
 
 import net.sf.json.JSONObject;
 
+import org.hhm.common.pojo.Content;
 import org.hhm.crawler.pojo.Config;
-import org.hhm.crawler.pojo.Content;
 
 public class Store {
 	static Config config = new Config();

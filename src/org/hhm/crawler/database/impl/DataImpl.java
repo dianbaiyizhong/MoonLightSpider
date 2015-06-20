@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import org.hhm.common.pojo.Content;
 import org.hhm.crawler.database.DBConnByMySql;
-import org.hhm.crawler.pojo.Content;
 
 public class DataImpl {
 

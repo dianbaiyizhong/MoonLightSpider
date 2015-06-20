@@ -1,6 +1,6 @@
 package org.hhm.crawler.analyzer;
 
-import org.hhm.crawler.pojo.Content;
+import org.hhm.common.pojo.Content;
 import org.hhm.crawler.pojo.Seeds;
 import org.hhm.crawler.store.Store;
 import org.jsoup.Jsoup;
