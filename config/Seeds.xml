@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Seeds>
+	<!-- <seed id="1" name="天涯论坛"> -->
+	<!-- <field name="url">http://bbs.tianya.cn/</field> -->
+	<!-- <field name="title" lablename="title" /> -->
+	<!-- <field name="text" lablename="div" labelclass="bbs-content clearfix" -->
+	<!-- labelid="" /> -->
+	<!-- <field name="point_depth">20</field> -->
+	<!-- <field name="filterSuffix"> -->
+	<!-- javascript:;,gif,GIF,jpg,JPG,png,PNG,ico,ICO,css,sit,eps,wmf,zip,ppt,mpg,xls,gz,rpm,tgz,mov,MOV,exe,jpeg,JPEG,bmp,BMP,apk -->
+	<!-- </field> -->
+	<!-- <field name="directDomain">http://bbs.tianya.cn</field> -->
+	<!-- </seed> -->
+
+
+	<seed id="2" name="新浪门户">
+		<field name="url">http://sports.sina.com.cn/</field>
+		<field name="title" lablename="title" />
+		<field name="text" />
+		<field name="point_depth">20</field>
+		<field name="filterSuffix">
+			javascript:;,gif,GIF,jpg,JPG,png,PNG,ico,ICO,css,sit,eps,wmf,zip,ppt,mpg,xls,gz,rpm,tgz,mov,MOV,exe,jpeg,JPEG,bmp,BMP,apk
+		</field>
+		<field name="directDomain">http://sports.sina.com.cn</field>
+	</seed>
+
+
+</Seeds>
