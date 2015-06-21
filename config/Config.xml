@@ -13,5 +13,7 @@
 	<!-- 单位采集线程数 -->
 	<threadGatherMax>50</threadGatherMax>
 	<!-- 采取信息存储路径 -->
-	<indexPath>/Users/admin/MoonLightSpider/新浪门户</indexPath>
+	<indexPath>F:\SpiderMoonLight\index</indexPath>
+	<msgPath>F:\SpiderMoonLight\新浪门户</msgPath>
+
 </Configs>

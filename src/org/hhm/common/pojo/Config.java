@@ -7,8 +7,17 @@ public class Config {
 	private static int threads = 1;
 	private static int threadGatherMax = 20;
 	private static int isApplyTemplate = 0;
-
 	private static String indexPath;
+
+	public static String getMsgPath() {
+		return msgPath;
+	}
+
+	public static void setMsgPath(String Parameter) {
+		msgPath = Parameter;
+	}
+
+	private static String msgPath;
 
 	public static String getIndexPath() {
 		return indexPath;

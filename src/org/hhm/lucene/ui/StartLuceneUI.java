@@ -15,7 +15,6 @@ import javax.swing.JTextField;
 import org.hhm.common.pojo.Config;
 import org.hhm.common.util.xml.XMLElement;
 import org.hhm.common.util.xml.XmlBean;
-import org.hhm.crawler.spider.Spider;
 import org.hhm.lucene.build.Build;
 
 public class StartLuceneUI extends JFrame {
@@ -102,8 +101,8 @@ public class StartLuceneUI extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-
-				config.setIndexPath(textField_msgPath.getText());
+				config.setMsgPath(textField_msgPath.getText());
+				config.setIndexPath(textField_indexPath.getText());
 				try {
 					xmlBean.setConfig(config, new XMLElement(
 							"config/Config.xml").set(), new FileWriter(
@@ -112,7 +111,7 @@ public class StartLuceneUI extends JFrame {
 					e1.printStackTrace();
 				}
 
-				// 开始爬虫
+				// 开始索引
 				new Build().Start();
 			}
 
@@ -123,7 +122,8 @@ public class StartLuceneUI extends JFrame {
 	private void InitValue() {
 		xmlBean.getConfig(new XMLElement("config/Config.xml").get());
 		// 把xml中索引文件路径的值放在文本框里
-		textField_msgPath.setText(config.getIndexPath());
+		textField_msgPath.setText(config.getMsgPath());
+		textField_indexPath.setText(config.getIndexPath());
 
 	}
 

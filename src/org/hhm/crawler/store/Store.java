@@ -14,7 +14,7 @@ public class Store {
 	static Config config = new Config();
 
 	public void Save(Content content) {
-		File file = new File(config.getIndexPath() + "/"
+		File file = new File(config.getMsgPath() + "/"
 				+ content.getSeedName());
 
 		// 先创建一个seedName的文件夹

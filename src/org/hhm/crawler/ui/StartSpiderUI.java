@@ -49,7 +49,7 @@ public class StartSpiderUI extends JFrame {
 	private void InitValue() {
 		xmlBean.getConfig(new XMLElement("config/Config.xml").get());
 		// 把xml中索引文件路径的值放在文本框里
-		textField_indexPath.setText(config.getIndexPath());
+		textField_indexPath.setText(config.getMsgPath());
 
 	}
 
@@ -79,7 +79,7 @@ public class StartSpiderUI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				config.setIndexPath(textField_indexPath.getText());
+				config.setMsgPath(textField_indexPath.getText());
 				try {
 					xmlBean.setConfig(config, new XMLElement(
 							"config/Config.xml").set(), new FileWriter(

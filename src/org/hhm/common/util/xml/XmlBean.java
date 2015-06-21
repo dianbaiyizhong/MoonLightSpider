@@ -74,7 +74,10 @@ public class XmlBean {
 		config.setThreadGatherMax(Integer.parseInt(root
 				.elementText("threadGatherMax")));
 
+		config.setMsgPath(root.elementText("msgPath"));
+		
 		config.setIndexPath(root.elementText("indexPath"));
+
 		return config;
 	}
 
@@ -83,6 +86,7 @@ public class XmlBean {
 		Element root = doc.getRootElement();
 
 		root.element("indexPath").setText(config.getIndexPath());
+		root.element("msgPath").setText(config.getMsgPath());
 
 		XMLWriter output;
 		try {

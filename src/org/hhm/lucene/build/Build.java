@@ -2,13 +2,20 @@ package org.hhm.lucene.build;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import net.sf.json.JSONObject;
 
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
 import org.hhm.common.pojo.Config;
 import org.hhm.common.pojo.Content;
 import org.hhm.common.util.xml.XmlBean;
+import org.hhm.lucene.excute.IndexBuilder;
+import org.wltea.analyzer.lucene.IKAnalyzer;
 
 public class Build {
 
@@ -16,8 +23,10 @@ public class Build {
 	static Config config = new Config();
 
 	public void Start() {
-		File file = new File(config.getIndexPath());
+		File file = new File(config.getMsgPath());
 		File[] list = file.listFiles();
+
+		List<Content> items = new ArrayList<Content>();
 		for (int i = 0; i < list.length; i++) {
 
 			File file1 = new File(list[i].getAbsolutePath());
@@ -26,10 +35,29 @@ public class Build {
 						.fromObject(ReadFromTxt(file1));
 				Content content = (Content) JSONObject.toBean(jsonObject,
 						Content.class);
-				System.out.println(content);
+				items.add(content);
+
 			}
 
 		}
+
+		BuildIndex(items);
+
+	}
+
+	public void BuildIndex(List<Content> items) {
+		IKAnalyzer analyzer = new IKAnalyzer();
+		analyzer.setUseSmart(true);
+		// 设置产生索引文件的目录
+		File file = new File(config.getIndexPath());
+		Directory directory = null;
+		try {
+			directory = FSDirectory.open(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		IndexBuilder indexBuilder = new IndexBuilder();
+		indexBuilder.buildIndexer(analyzer, directory, items);
 	}
 
 	public static String ReadFromTxt(File file) {
